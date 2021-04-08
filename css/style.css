@@ -1,6 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 body{
 	background: url(../imgs/fundo.jpg) no-repeat center center fixed;
@@ -9,11 +10,12 @@ body{
   	-o-background-size: cover;
   	background-size: cover;
   }
-                 /*BANNER*/
+    /********************BANNER********************/
   .banner{
+  	background-image: linear-gradient(to right, #10ac84 , #2ecc71);
+  	transition: all 0.4s;
   	font-family: 'Raleway', sans-serif;
   	font-size: 50px;
-  	background: #545353;
   	width: 100%;
   	height: 120px;
   }
@@ -22,16 +24,18 @@ body{
   	top: 10px;
   	margin:2px ;
   	margin-left: 10%;
+  	transition: all 2s;
   }
   .text1{
-  	font-family: 'Permanent Marker', cursive;
-  	text-shadow: 1px 1px 5px #efbf48;
+  	font-family: 'Train One', cursive;
+  	text-shadow: 1px 1px 5px black;
   	position: relative;
 	bottom: 15px;
-  	color: black;
+  	color: white;
   	text-decoration: none;
+  	font-weight: 300;
   }
-                  /*LOGIN*/
+    /********************LOGIN********************/
   .login{
   	text-align: center;
   	text-decoration: none;
@@ -50,7 +54,7 @@ body{
   .login:hover{
   	background:#efbf48;
   }
-                 /*CADASTRO*/
+    /********************CADASTRO********************/
   .cadastro{
   	text-align: center;
   	text-decoration: none;
@@ -69,3 +73,39 @@ body{
   .cadastro:hover{
   	background:#efbf48;
   }
+
+
+
+
+/********************BANNER LINKS********************/
+
+.links{
+	padding-left: 50%;
+	position: absolute;
+	margin-bottom: 50px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 0fr;
+	font-size: 30px;
+	color: white;
+}
+.links a{
+	color: white;
+	text-decoration: none;
+}
+.links li {
+	list-style-type: none;
+}
+ .links a:hover{
+  	color:#efbf48;
+  }
+
+
+
+
+
+
+
+
+
+
+
