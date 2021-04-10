@@ -15,7 +15,7 @@ body{
   }
     /********************BANNER********************/
   .banner{
-  	background-image: linear-gradient(to right, #10ac84 , #2ecc71);
+  	background-image: linear-gradient(to right, #02795b , #1bc060);
   	font-family: 'Raleway', sans-serif;
   	font-size: 50px;
   	width: 100%;
@@ -139,8 +139,9 @@ body{
 	list-style-type: none;
 }
  .links a:hover{
- 	text-shadow: 1px 1px 1px black;
-  	color:#efbf48;
+	 /* font-size: 35px; */
+ 	text-shadow: 1px 1px 1px rgb(0, 255, 76);
+  	/* color:#efbf48; */
   }
 
 
