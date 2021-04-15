@@ -1,0 +1,158 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+	background: url(../imgs/fundo.jpg) no-repeat center center fixed;
+	width: 100%;
+  	/*height: 1300px;*/
+  	/* margin-bottom: 500px; */
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  }
+    /********************BANNER********************/
+  .banner{
+  	background-image: linear-gradient(to right, #02795b , #1bc060);
+  	font-family: 'Raleway', sans-serif;
+  	font-size: 50px;
+  	width: 100%;
+  	height: 120px;
+  }
+  .icon{
+  	position: relative;
+  	top: 10px;
+  	margin:2px ;
+  	margin-left: 10%;
+  }
+  .text1{
+  	font-family: 'Train One', cursive;
+  	text-shadow: 1px 1px 5px black;
+  	position: relative;
+	bottom: 15px;
+  	color: white;
+  	text-decoration: none;
+  }
+  .cadastrotxt{
+      color: white;
+      font-size: 40px;
+      padding-top: 2%;;
+      text-align: center;
+  }
+  /********************INPUT********************/
+  .content{
+  	border-radius: 50px;
+ 	margin-top: 8%;
+ 	margin-left: 7%;
+ 	width: 40%;
+ 	height: 400px;
+ 	background:#222;
+ 	opacity: 0.9;
+  }
+  .usuario, .senha{
+	text-align: center;
+	border: none;
+ 	border-radius: 10px;
+ 	display: block;
+ 	width:40%;
+ 	height:9%;
+ 	margin-left: 30%;
+	border: none;
+    outline: none;
+ }
+ input:hover{
+	 background-color:#d4d4d4;
+ }
+ .criarcontabtt{
+	outline: none;
+ 	border-radius: 100px;
+ 	text-shadow: 1px 1px 1px black;
+ 	color: #ffffff;
+ 	background:#10ac84;
+ 	margin-top: 3%;
+	display: block;
+ 	width:40%;
+ 	height:10%;
+ 	margin-left: 30%;
+ }
+ .criarconta:hover{
+ 	background:#ff8400;
+ }
+ .usuariotxt{
+ 	padding-top: 6%;
+ 	text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0);
+ 	color: #ffffff;
+	font-size: 15px;
+	text-align: center;
+ }
+ .senhatxt{
+ 	text-shadow: 1px 1px 1px black;
+ 	color: #ffffff;
+	font-size: 15px;
+	text-align: center;
+ }
+ .criarcontabtt:hover{
+ 	background:#269577;
+ }
+ #txt:hover{
+ 	background:#4f4f4f;
+ }
+  .cadastro:hover{
+  	background:#efbf48;
+  }
+  section h3{
+      font-size: 23px;
+      padding-top: 2%;
+      color: rgb(255, 255, 255);
+      text-shadow: 1px 1px 1px rgb(0, 0, 0);
+      text-align: center;
+  }
+  .fazerlogin{
+      text-decoration: none;
+      color: rgb(35, 35, 252);
+  }
+  .fazerlogin:hover{
+      color: rgb(28, 28, 255);
+      text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  }
+/********************BANNER LINKS********************/
+.links{
+	text-shadow: 1px 1px 4px black;
+	top: 6%;
+	padding-left: 50%;
+	position: absolute;
+	display: flex;
+	font-size: 30px;
+}
+.links a{
+	margin: 80px;
+	color: white;
+	text-decoration: none;
+}
+.links li {
+	list-style-type: none;
+}
+ .links a:hover{
+ 	text-shadow: 1px 1px 1px rgb(0, 255, 76);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
