@@ -5,6 +5,7 @@
 }
 html{
 	scroll-behavior: smooth;
+	text-rendering: optimizeLegibility;
 }
 body{
 	background: url(../imgs/fundo.jpg) no-repeat center center fixed;
@@ -105,7 +106,7 @@ body{
   .cadastro:hover{
   	background:#efbf48;
   }
-  section h3{
+  form h3{
       font-size: 23px;
       padding-top: 2%;
       color: rgb(255, 255, 255);
@@ -122,6 +123,7 @@ body{
   }
 /********************BANNER LINKS********************/
 .links{
+	float: right;
 	text-shadow: 1px 1px 4px black;
 	top: 6%;
 	padding-left: 50%;

@@ -1,10 +1,10 @@
-<?php 
-	require'../Classes/UserLogin.php';
-
-	if (isset($_POST['btn1'])) {
-		(new UserLogin())->validateOnlineLogin();
-	}
- ?>
+<?php
+    include('../config.php');
+    if(isset($_POST['acao'])){
+        $usuario = $_POST['usuario'];
+        $senha = $_POST['senha'];
+    }
+?>
 <!DOCTYPE html>
 <html pt-br>
 <head>
@@ -34,16 +34,16 @@
 	</div>
 </header>
 
-	<!-- LOGIN E CADASTRO -->
-	<section>
+	<!-- LOGIN -->
+	<form>
 		<div class="content">
 			<h1 class="entrartxt">Entrar</h1>
 			<p class="usuariotxt">Usuário</p>
-    		<input  class="usuario" type="text" name="Usuário" > 
+    		<input  class="usuario" type="text" name="usuario" > 
     		<p class="senhatxt">Senha</p>
-    		<input class="senha" type="password" name="Senha" >
-    		<button class="entrar" >Entrar</button>
+    		<input class="senha" type="password" name="senha" >
+			<input class="entrar" type="submit" value="Entrar" name="acao">
     		<h3> Não tem conta?<a href="../singup/index.php" class="criarcontabtt"> Criar conta </a></h3>
-	</section>
+	</from>
 </body>
 </html>

@@ -114,7 +114,7 @@ body{
   .cadastro:hover{
   	background:#efbf48;
   }
-  section h3{
+  form h3{
 	font-size: 23px;
 	padding-top: 7%;
 	color: rgb(255, 255, 255);

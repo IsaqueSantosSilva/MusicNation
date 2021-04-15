@@ -33,7 +33,7 @@
 	</div>
 </header>
 	<!-- LOGIN E CADASTRO -->
-	<section>
+	<form>
 		<div class="content">
             <h1 class="cadastrotxt">Cadastrar</h1>
 			<p class="usuariotxt">Usuário</p>
@@ -42,8 +42,8 @@
     		<input class="senha" type="password" name="Senha" >
             <p class="senhatxt">Repetir senha</p>
     		<input class="senha" type="password" name="Senha" >
-    		<button class="criarcontabtt" >Criar conta</button>
+			<input class="criarcontabtt" type="submit" value="Entrar" name="acao">
     		<h3> Já tem conta?<a href="../login/index.php" class="fazerlogin"> Entrar </a></h3>
-	</section>
+	</form>
 </body>
 </html>
