@@ -1,10 +1,3 @@
-<?php 
-	require'../Classes/UserLogin.php';
-
-	if (isset($_POST['btn1'])) {
-		(new UserLogin())->validateOnlineLogin();
-	}
- ?>
 <!DOCTYPE html>
 <html pt-br>
 <head>

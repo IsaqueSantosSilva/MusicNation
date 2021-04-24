@@ -22,8 +22,8 @@ body{
   	background-image: linear-gradient(to right, #02795b , #1bc060);
   	font-family: 'Raleway', sans-serif;
   	font-size: 50px;
-  	width: 100%;
-  	height: 120px;
+  	width: auto;
+  	height: auto;
   }
   .icon{
   	position: relative;
@@ -50,7 +50,7 @@ body{
   	border-radius: 50px;
  	margin-top: 8%;
  	margin-left: 7%;
- 	width: 40%;
+ 	width: 300px;
  	height: 400px;
  	background:#222;
  	opacity: 0.9;
@@ -64,10 +64,7 @@ body{
  	height:9%;
  	margin-left: 30%;
 	border: none;
-    outline: none;
- }
- input:hover{
-	 background-color:#d4d4d4;
+    outline-color: rgb(0, 150, 7);
  }
  .criarcontabtt{
 	outline: none;
@@ -105,7 +102,7 @@ body{
  }
   .cadastro:hover{
   	background:#efbf48;
-  }
+}
   form h3{
       font-size: 23px;
       padding-top: 2%;
@@ -127,8 +124,8 @@ body{
 	text-shadow: 1px 1px 4px black;
 	top: 6%;
 	padding-left: 50%;
-	position: absolute;
-	display: flex;
+	position: fixed;
+	display:inline-flex;
 	font-size: 30px;
 }
 .links a{
