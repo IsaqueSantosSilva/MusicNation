@@ -1,15 +1,25 @@
-<?php 
-    session_start();
-    const host = 'localhost';
-    const dbname = 'login';
-    const user = 'root';
-    const senha = '';
+<?php
 
-    try {
-        $pdo = new PDO('mysql:host='.host.';dbname='.dbname.'', user, senha, [PDO::MYSQL_ATTR_INIT_COMMAND =>  "SET NAMES 'UTF8'"]);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Vai mostrar erros caso exista.
-    }catch (Exception $e) { /*Pegue a exception e coloque na variável $e */
-        echo 'Erro ao conectar ao banco de dados';
-        echo $e;
-    } 
+class config {
+    public static function connect(){
+        $host = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "musicnation";
+        
+        try {
+            $con = new PDO("mysql:host=$host;dbname=$dbname" , $username , $password);
+
+            // $con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
+
+        }catch(PDOException $e)
+        {
+            // echo "Falhou" . $e->getMessage();
+        }
+
+        return $con;
+    }
+    
+}
+
 ?>
