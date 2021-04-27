@@ -45,15 +45,6 @@
     		<a class="criarcontabtt" href="../register/register.php">Criar Conta</a>
   		</form>
 	 </div>
-
-		  	<!-- <div class="content"> -->
-			<!-- <h1 class="entrartxt">Entrar</h1>
-			<p class="usuariotxt">Usuário</p>
-    		<input  class="usuario" type="text" name="usuario" > 
-    		<p class="senhatxt">Senha</p>
-    		<input class="senha" type="password" name="senha" >
-			<input class="entrar" type="submit" value="Entrar" name="acao">
-    		<h3> Não tem conta?<a href="../singup/index.php" class="criarcontabtt"> Criar conta </a></h3> -->
 	</from>
 </body>
 </html>

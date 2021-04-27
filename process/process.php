@@ -18,8 +18,7 @@ if(isset($_POST['register']))
     if(insertDetails($con,$username,$email,$password));
     {
         $_SESSION['username'] = $username;
-        echo "<script type='text/javascript'>  window.location='profile.php'; </script>";
-        // header("Locatiion: profile.php");
+        header("Location: profile.php");
     }
 }
 
@@ -37,7 +36,7 @@ if(isset($_POST['login']))
     if(checklogin($con,$username,$password))
     {
         $_SESSION['username'] = $username;
-        echo "<script type='text/javascript'>  window.location='../login/login.php.php'; </script>";
+        header("Location: ../mainpage/mainpage.php");
     }
     else{
         echo "Informações incorretas";
