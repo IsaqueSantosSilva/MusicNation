@@ -2,17 +2,18 @@
 <html pt-br>
 <head>
 	<link rel="stylesheet" type="text/css" href="../css/register.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweet-modal@1.3.2/dist/min/jquery.sweet-modal.min.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
 	<link rel="icon" href= "../imgs/icon.png" style="width: 100%; height: 100%">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
 	<meta name="Author" name="Isaque Silva">
-	<meta name="description" content="site de streaming de musicas/criar conta">
 	<meta charset="utf-8">
 	<title>Music Nation - Criar conta</title>
 </head>
-<body>
+<body style="background: #341f97;">
     <!-- BANNER -->
 <header>
 	<div class="banner">
@@ -42,5 +43,14 @@
     		<a class="criarcontabtt" href="../login/login.php">Fazer login</a>
   		</form>
 	 </div>
+	 
+	 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+	<script type="text/javascript" src="../js/script.js"></script>
+	<script type="text/javascript">
+		// Show modal
+		$('.ui.basic.modal').modal('show');
+	</script>
+	<!-- <script src="../js/main.js"></script> -->
 </body>
 </html>

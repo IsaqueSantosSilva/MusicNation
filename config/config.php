@@ -10,7 +10,7 @@ class config {
         try {
             $con = new PDO("mysql:host=$host;dbname=$dbname" , $username , $password);
 
-            // $con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
+            $con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
 
         }catch(PDOException $e)
         {
