@@ -1,159 +1,130 @@
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-	background: #341f97;
-  }
-
-    /********************BANNER********************/
-.banner{
-    -ms-user-select: none;
-    user-select: none; 
-  	background-image: linear-gradient(to right, #000000 , #0a0a0a);
-  	font-family: 'Raleway', sans-serif;
-  	font-size: 50px;
-  	width: 100%;
-  	height: 120px;
-  }
-
-.icon{
-  	position: relative;
-  	top: 10px;
-  	margin:2px ;
-  	margin-left: 10%;
-  }
-
-.text1{
-	font-family: 'Train One', cursive;
-  	text-shadow: 1px 1px 5px black;
-  	position: relative;
-	bottom: 15px;
-  	color: white;
-  	text-decoration: none;
-  }
-
-.entrartxt{
-	color: white;
-	font-size: 40px;
-	padding-top: 2%;;
-	text-align: center;
-  }
-
-  /********************INPUT********************/
-  .content{
-	border: 5px solid white;
-  	border-radius: 50px;
- 	margin-top: 8%;
- 	margin-left: 30%;
- 	width: 40%;
- 	height: 450px;
- 	background:#222;
- 	opacity: 0.9;
-  }
-
-  .usuario, .senha{
-	text-align: center;
-	border: none;
- 	border-radius: 10px;
- 	display: block;
- 	width:40%;
- 	height:28px;
- 	margin-left: 30%;	
-	outline: none;
- }
-
- .criarconta{
-	text-decoration: none;
-	padding-top: 10px;
-	text-align: center;
- 	background:#d35400;
- 	border-radius: 100px;
- 	text-shadow: 2px 2px 0.5px black;
- 	color: #ffffff;
- 	margin-top: 3%;
-	display: block;
- 	width:40%;
- 	height:10%;
- 	margin-left: 30%;
- }
-
- div h1{
-	text-shadow: 1px 1px 1px rgb(0, 0, 0);
-	color: white;
-	margin:40px;
-	padding-top: 20px;
- }
-
- .labeltxt{
-	color: rgb(255, 255, 255);
-	padding-left: 30%;
-	font-size: 20px;
- }
-
-.fazerloginbtt{
-	margin-top:50px;
-	font-size: 20px;
-	padding-left: 44%;
-	text-decoration: none;
-	color: rgb(0, 245, 61);
+body {
+  background: #341f97;
 }
 
-.fazerloginbtt:hover{
-	color: rgb(0, 180, 45);
-	text-shadow: 1px 1px 1px rgb(0, 0, 0);
+/********************BANNER********************/
+.banner {
+  -ms-user-select: none;
+  user-select: none;
+  background-image: linear-gradient(to right, #000000, #0a0a0a);
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  width: 100%;
+  height: 120px;
 }
 
-.entrar{
-	cursor: pointer;
-	font-family: 'Heebo', sans-serif;
-	border-radius: 20px;
-	font-size:23px ;
-	color: rgb(0, 0, 0);
-	border: 2px solid ;
-	background-color: rgb(18, 209, 18);
-	margin-top: 30px;
-	margin-left: 37%;
-	width: 200px;
-	height: 50px;
+.icon {
+  position: relative;
+  top: 10px;
+  margin: 2px;
+  margin-left: 10%;
 }
 
-.entrar:hover{
-	background-color: rgb(0, 255, 0);
+.text1 {
+  font-family: "Train One", cursive;
+  text-shadow: 1px 1px 5px black;
+  position: relative;
+  bottom: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.entrartxt {
+  color: white;
+  font-size: 40px;
+  padding-top: 2%;
+  text-align: center;
 }
 
 /********************BANNER LINKS********************/
-.links{
-	text-shadow: 1px 1px 4px black;
-	top: 6%;
-	padding-left: 50%;
-	position: absolute;
-	display: flex;
-	font-size: 30px;
+.links {
+  text-shadow: 1px 1px 4px black;
+  top: 6%;
+  padding-left: 50%;
+  position: absolute;
+  display: flex;
+  font-size: 30px;
 }
 
-.links a{
-	margin: 80px;
-	color: white;
-	text-decoration: none;
+.links a {
+  margin: 80px;
+  color: white;
+  text-decoration: none;
 }
 
 .links li {
-	list-style-type: none;
+  list-style-type: none;
 }
 
- .links a:hover{
- 	text-shadow: 1px 1px 1px #341f97;
+.links a:hover {
+  text-shadow: 1px 1px 1px #341f97;
 }
 
-/* MENSAGEM DE ERRO */
+/********************USER SECTION********************/
 
-.errorMsg{
-	padding-top: 10px;
-	font-size: 22px;
-	color: rgb(255, 0, 0);
-	text-shadow: 1px 1px 1px black;
+.navbar {
+	overflow: hidden;
+	background-color: #333;
+  }
+  
+  .navbar a {
+	float: left;
+	font-size: 16px;
+	color: white;
 	text-align: center;
-}
+	padding: 14px 16px;
+	text-decoration: none;
+  }
+  
+  .dropdown {
+	float: left;
+	overflow: hidden;
+	background-color: rgb(39, 39, 39);
+  }
+  
+  .dropdown .dropbtn {
+	font-size: 16px;  
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+	background-color: red;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  .dropdown-content a {
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+	background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
