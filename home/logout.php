@@ -4,7 +4,7 @@ $_SESSION['uid']='';
 $_SESSION['uname']=''; 
 session_unset(); 
 
-$url='login.php';
-header("Location: $url"); // Page redirecting to login.php 
+$url='../login/login.php';
+header("Location: $url");
  
 ?>
