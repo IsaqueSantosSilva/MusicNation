@@ -31,24 +31,35 @@ include("session.php");
     </header>
 
     <!-- USER SECTION -->
+    <div class="container">
     <header>
-        <div class="secondbanner" id="myHeader">
+    <div class="secondbanner" id="myHeader">
             <input class="srcbar" type="text" placeholder="Pesquisar...">
             <i  class="search icon"></i>
 
-            <div class="dropdown" class="myHeader">
-                <button class="dropbtn">
+        <div class="dropdown" class="myHeader">
+            <button class="dropbtn">
                     <h3><?php echo $_SESSION['uname'] ; ?> <i class="fa fa-caret-down"></i></h3>
                 </button>
-                <div class="dropdown-content">
+            <div class="dropdown-content">
                     <a href="#">Perfil</a>
                     <a href="../home/logout.php">Sair</a>
-                </div>
             </div>
-        </div>
+            </div>
+            <!-- LIGHT SWITCH -->
+            <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+            </label>            
         </div>
 
+REST OF THE CONTENT
+
+
+        </div>
+     </div>   
     </header>
+    
 </body>
 <script src="../script/home.js"></script>
 
