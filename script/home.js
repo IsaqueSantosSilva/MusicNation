@@ -10,13 +10,13 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
- // FUNCÃO PARA MUDAR O TEMA
+
  function setTheme(themeName) {
   localStorage.setItem('theme', themeName);
   document.documentElement.className = themeName;
 }
 
-// function to toggle between light and dark theme
+// FUNCÃO PARA MUDAR O TEMA
 function toggleTheme() {
   if (localStorage.getItem('theme') === 'theme-dark') {
       setTheme('theme-light');

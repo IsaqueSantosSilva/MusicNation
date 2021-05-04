@@ -23,14 +23,10 @@ if (!empty($_POST['submitloginform'])) {
   
  }
  else{
-  $errorMessage = "Detalhes inválidos" ;
-  
+  $errorMessage = "Detalhes inválidos" ; 
  }
- 
-
 } 
 ?>
-
 <html>
 
 <head>
