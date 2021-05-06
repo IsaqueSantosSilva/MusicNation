@@ -1,12 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box; 
 }
-
-body{
-	background: #341f97;
-  }
 
     /********************BANNER********************/
 .banner{
@@ -14,7 +9,7 @@ body{
     user-select: none; 
   	background-image: linear-gradient(to right, #000000 , #0a0a0a);
   	font-family: 'Raleway', sans-serif;
-  	font-size: 50px;
+  	font-size: 6vh;
   	width: 100%;
   	height: 120px;
   }
@@ -22,106 +17,110 @@ body{
 .icon{
   	position: relative;
   	top: 10px;
-  	margin:2px ;
   	margin-left: 10%;
+	max-width: 10px;
+	height: auto;
   }
 
 .text1{
-	font-family: 'Train One', cursive;
   	text-shadow: 1px 1px 5px black;
   	position: relative;
 	bottom: 15px;
   	color: white;
   	text-decoration: none;
+	font-family: 'Train One', cursive;
   }
 
-.entrartxt{
-	color: white;
-	font-size: 40px;
-	padding-top: 2%;;
-	text-align: center;
-  }
+  /********************FORM********************/
 
-  /********************INPUT********************/
-  .content{
+.content{
+	position: relative;
+	top: 150px;
+	margin: auto;
 	border: 5px solid white;
-  	border-radius: 50px;
- 	margin-top: 8%;
- 	margin-left: 30%;
- 	width: 40%;
- 	height: 450px;
+  	border-radius: 25px;
+ 	width: 50%;
+ 	height: 500px;
  	background:#222;
- 	opacity: 0.9;
-  }
-
-  .usuario, .senha{
+	user-select: none; 
 	text-align: center;
-	border: none;
- 	border-radius: 10px;
- 	display: block;
- 	width:40%;
- 	height:28px;
- 	margin-left: 30%;	
-	outline: none;
- }
+}
 
- .criarconta{
-	text-decoration: none;
-	padding-top: 10px;
-	text-align: center;
- 	background:#d35400;
- 	border-radius: 100px;
- 	text-shadow: 2px 2px 0.5px black;
- 	color: #ffffff;
- 	margin-top: 3%;
+div h1{
+	position: relative;
+	padding-top: 15px;
+   	text-shadow: 1px 1px 1px rgb(0, 0, 0);
+   	color: rgb(248, 219, 165);
+}
+
+.inputs{
+	top: 35px;
+	margin: auto;
+	position: relative;
 	display: block;
- 	width:40%;
- 	height:10%;
- 	margin-left: 30%;
+ 	border-radius: 5px;
+	outline-color: rgb(0, 255, 0);
+	box-shadow: 0 0 10px;
+	width: 50%;
+	padding: 10px 20px;
  }
 
- div h1{
-	text-shadow: 1px 1px 1px rgb(0, 0, 0);
-	color: white;
-	margin:40px;
-	padding-top: 20px;
- }
+.cadastrar{
+	position: relative;
+	top: 80px;
+	margin: auto;
+	display: block;
+	border-radius: 10px;
+	font-size: 2vh;
+	border: 2px solid;
+	background-color: rgb(18, 209, 18);
+	cursor: pointer;
+	width: 20%;
+	min-width: 80px;
+	height: 50px;
+	color: rgb(0, 0, 0);
+	transition: 0.5s;
+}
 
- .labeltxt{
+.cadastrar:hover{
+	background-color: rgb(251, 255, 0);
+}
+
+.labeltxt{
+	position: relative;
+	top: 35px;
 	color: rgb(255, 255, 255);
-	padding-left: 30%;
-	font-size: 20px;
+	font-size: 2.5vh;
  }
 
 .fazerloginbtt{
-	margin-top:50px;
-	font-size: 20px;
-	padding-left: 44%;
-	text-decoration: none;
+	top: 85px;
+	position: relative;
+	font-size: 2vh;
 	color: rgb(0, 245, 61);
+	transition: 0.5s;
+	text-decoration: none;
 }
 
 .fazerloginbtt:hover{
-	color: rgb(0, 180, 45);
-	text-shadow: 1px 1px 1px rgb(0, 0, 0);
+	color: rgb(251, 255, 0);	
 }
 
-.entrar{
-	cursor: pointer;
-	font-family: 'Heebo', sans-serif;
-	border-radius: 20px;
-	font-size:23px ;
-	color: rgb(0, 0, 0);
-	border: 2px solid ;
-	background-color: rgb(18, 209, 18);
-	margin-top: 30px;
-	margin-left: 37%;
-	width: 200px;
-	height: 50px;
+.errorMsg{
+	font-size: 2.5vh;
+	position: relative;
+	top: 105px;
+	color: rgb(255, 50, 50);
+	text-shadow: 1px 1px 5px black;
 }
 
-.entrar:hover{
-	background-color: rgb(0, 255, 0);
+.sucessMsg{
+	font-size: 2.5vh;
+	position: relative;
+	top: 105px;
+	color: rgb(38, 255, 0);
+	text-shadow: 1px 1px 1px black;
+	
 }
 
 /********************BANNER LINKS********************/
@@ -150,18 +149,3 @@ body{
 
 /* MENSAGEM DE ERRO */
 
-.erroMsg{
-	padding-top: 10px;
-	font-size: 22px;
-	color: rgb(253, 0, 0);
-	text-shadow: 1px 1px 1px black;
-	text-align: center;
-}
-
-.sucessMsg{
-	padding-top: 10px;
-	font-size: 22px;
-	color: rgb(0, 253, 0);
-	text-shadow: 1px 1px 1px black;
-	text-align: center;
-}

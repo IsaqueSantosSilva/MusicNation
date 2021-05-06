@@ -40,7 +40,7 @@ if (!empty($_POST['submitloginform'])) {
     <title>Music Nation - Entrar</title>
 </head>
 
-<body>
+<body style="background: #341f97;">
     <!-- BANNER -->
     <header>
         <div class="banner">
@@ -55,17 +55,17 @@ if (!empty($_POST['submitloginform'])) {
     </header>
     <!-- CADASTRO -->
     <div class="content">
-        <h1 style="text-align: center; color:wheat;">CRIAR CONTA</h1>
-        <form method="post" action="" name="login">
-            <label class="labeltxt">Endereço de Email:</label>
-            <input class="usuario" type="text" name="emailid" placeholder="Insira Email" required />
+        <h1> ENTRAR </h1>
+        <form class="inputform" method="post" action="" name="login">
+            <label class="labeltxt">Endereço de Email:</label> <br>
+            <input class="inputs" type="text" name="emailid" required /> <br>
 
-            <label class="labeltxt">Senha</label>
-            <input class="senha" type="password" name="userpassowrd" placeholder="Insira Senha" required />
+            <label class="labeltxt">Senha:</label> <br>
+            <input class="inputs" type="password" name="userpassowrd" required /> <br>
 
-            <input type="submit" class="Entrar" name="submitloginform" value="Login">
-            <a class="fazerloginbtt" href="../register/register.php">Criar Conta</a>
-            <div class="errorMsg"><?php echo $errorMessage; ?></div>
+            <input type="submit" class="entrar" name="submitloginform" value="ENTRAR"> <br>
+            <a class="fazerloginbtt" href="../register/register.php">Criar Conta</a><br>
+            <div class="errorMsg"><?php echo $errorMessage;?></div>
         </form>
     </div>
 

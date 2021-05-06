@@ -46,7 +46,7 @@ if (!empty($_POST['submitregistrationform'])) {
     <title>Music Nation - Criar Conta</title>
 </head>
 
-<body>
+<body style="background: #341f97;">
     <!-- BANNER -->
     <header>
         <div class="banner">
@@ -64,20 +64,19 @@ if (!empty($_POST['submitregistrationform'])) {
         <h1 style="text-align: center; color:wheat;">CRIAR CONTA</h1>
         <form method="post" action="" name="register">
 
-            <label class="labeltxt">Nome de usuário:</label>
-            <input class="usuario" type="text" name="username" autocomplete="off" placeholder="Insira usuário"
-                required />
+            <label class="labeltxt">Endereço de Email:</label>
+            <input class="inputs" type="email" name="emailid"  require />
 
-            <label class="labeltxt">Endereço de email:</label>
-            <input class="usuario" type="email" name="emailid" placeholder="Insira email" required />
+            <label class="labeltxt">Nome de usuário:</label>
+            <input class="inputs" type="text" name="username" autocomplete="off" required/>
 
             <label class="labeltxt">Senha:</label>
-            <input class="senha" type="password" name="userpassowrd" placeholder="Insira Senha" required />
+            <input class="inputs" type="password" name="userpassowrd" required/>
 
-            <input type="submit" class="entrar" name="submitregistrationform" value="Cadastrar-se">
+            <input type="submit" class="cadastrar" name="submitregistrationform" value="CRIAR CONTA">
             <a class="fazerloginbtt" href="../login/login.php">Fazer login</a>
 
-            <div class="erroMsg"><?php echo $errorMessage; ?></div>
+            <div class="errorMsg"><?php echo $errorMessage; ?></div>
             <div class="sucessMsg"><?php echo $sucessMessage; ?></div>
         </form>
 
