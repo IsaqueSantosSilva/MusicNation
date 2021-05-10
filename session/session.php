@@ -2,7 +2,7 @@
 
 if(empty($_SESSION['uid']))
 {
-$url='login.php';
+$url='../login/login.php';
 header("Location: $url");
 }
 else{

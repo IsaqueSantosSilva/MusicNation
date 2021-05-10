@@ -1,3 +1,4 @@
+// STICKY HEADER
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("myHeader");
@@ -10,31 +11,25 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
+// MODAL
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
 
- function setTheme(themeName) {
-  localStorage.setItem('theme', themeName);
-  document.documentElement.className = themeName;
+btn.onclick = function() {
+  modal.style.display = "block";
 }
 
-// FUNCÃO PARA MUDAR O TEMA
-function toggleTheme() {
-  if (localStorage.getItem('theme') === 'theme-dark') {
-      setTheme('theme-light');
-  } else {
-      setTheme('theme-dark');
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
 }
 
-// ARMAZENAR A ESCOLHA DO USUARIO
-(function () {
-  if (localStorage.getItem('theme') === 'theme-dark') {
-      setTheme('theme-dark');
-      document.getElementById('slider').checked = false;
-  } else {
-      setTheme('theme-light');
-    document.getElementById('slider').checked = true;
-  }
-})();
 
 
 

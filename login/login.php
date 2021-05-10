@@ -40,16 +40,16 @@ if (!empty($_POST['submitloginform'])) {
     <title>Music Nation - Entrar</title>
 </head>
 
-<body style="background: #341f97;">
+<body>
+<header>
+        <div class="banner" >
+            <span class="txt1"> Music</span> 
+            <span class="txt2">Nation</span>
+        </div>
+</header>
     <!-- BANNER -->
     <header>
         <div class="banner">
-            <ul class="links">
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Premium</a></li>
-            </ul>
-            <a class="icon"><img src="../imgs/logo.png" width="90" height="90"></a>
             <a class="text1"> MusicNation </a>
         </div>
     </header>

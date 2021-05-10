@@ -5,22 +5,21 @@ Class UserClass{
 public function DBConnect(){
 
 $dbhost ="localhost"; // NOME DO HOST
-$dbname ="musicnation" ; // NOME DA DB
-$dbuser ="root" ; // NOME DE USUARIO DO MYSQL
-$dbpass ="";  // SENHA DO MYSQL
+$dbname ="musicnation"; // NOME DA DB
+$dbuser ="root"; // NOME DE USUARIO DO MYSQL
+$dbpass =""; // SENHA DO MYSQL
 
 try {
 $dbConnection = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass); 
 $dbConnection->exec("set names utf8");
 $dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 return $dbConnection;       
-
 }
+
 catch (PDOException $e) {
 echo 'Conexão falhou: ' . $e->getMessage();
-}
-   
 } 
+}
 // LÓGICA E VALIDAÇÃO PARA A PÁGINA DE REGISTRO DE USUÁRIO
 public function userRegistration($username,$email,$password){
 
@@ -73,8 +72,7 @@ public function userLogin($email,$password){
  
  try{
   $dbConnection = $this->DBConnect();
-        $stmt = $dbConnection->prepare('SELECT * FROM `user` 
-  WHERE `EMAILID` = :EMAILID and `PASSWORD` = :PASSWORD');
+      $stmt = $dbConnection->prepare('SELECT * FROM `user` WHERE `EMAILID` = :EMAILID and `PASSWORD` = :PASSWORD');
   $hash_password= hash('sha256', $password); 
   $stmt->bindParam(":EMAILID", $email,PDO::PARAM_STR);
   $stmt->bindParam(":PASSWORD", $hash_password,PDO::PARAM_STR);
@@ -84,8 +82,11 @@ public function userLogin($email,$password){
   $data=$stmt->fetch(PDO::FETCH_OBJ);
   if($Count == 1){
    session_start();
-   $_SESSION['uid']=$data->UID; //SALVANDO O VALOR DE SESSÃO DE USUÁRIO
-   $_SESSION['uname']=$data->USERNAME; //SALVANDO O VALOR DE SESSÃO DE USUÁRIO
+   $_SESSION['uid']=$data->UID; //SALVANDO O VALOR DE ID
+   $_SESSION['uname']=$data->USERNAME; //SALVANDO O VALOR DE NOME DE USUARIO
+   $_SESSION['emailid']=$data->EMAILID; //SALVANDO O VALOR DE EMAIL
+   $_SESSION['joindateid']=$data->JOINDATE; //SALVANDO O VALOR DE DATA DE CADASTRO
+   $_SESSION['passid']=$data->PASSWORD; //SALVANDO O VALOR DE SENHA
    $dbConnection = null ;
             return true;
       
@@ -93,7 +94,6 @@ public function userLogin($email,$password){
   else{
    $dbConnection = null ;
             return false ;
-   
   }
   
  }
@@ -102,6 +102,5 @@ public function userLogin($email,$password){
  }
  
 } 
- 
 }
 ?>
