@@ -32,8 +32,9 @@ include("../session/session.php");
                     <h4><?php echo $_SESSION['uname'] ; ?> <i class="fa fa-caret-down"></i></h4>
                 </button>
             <div class="dropdown-content">
-                    <a href="#">Perfil</a>
+                    <a style="cursor: pointer;" id="myBtn">Perfil</a>
                     <a href="../home/logout.php">Sair</a>
+                    
             </div>
         </div>
     </div>
@@ -42,14 +43,30 @@ include("../session/session.php");
             <input class="srcbtn" type="image"  src="../imgs/srcicon.png">
         </div> 
 
-        <button id="myBtn">Open Modal</button>
     <!-- MODAL -->
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal" class="myHeader">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <P>Nome de usuário: <?php echo $_SESSION['uname'] ; ?></P>
-            <P>Endereço de email: <?php echo $_SESSION['emailid'] ; ?></P>
-            <P>Data de cadastro: <?php echo $_SESSION['joindateid'] ; ?></P>
+                <div class="main-info-div">
+                        <div class="info-div1" style="border-radius: 20px 0px 0px;">
+                            <p>Usuário:</p>
+                            <p style="color: green;"><?php echo $_SESSION['uname'];?></p>
+                        </div>
+                        <div class="info-div1">
+                            <P>Email:</P>
+                            <p style="color: green;"><?php echo $_SESSION['emailid'];?></p>
+                        </div>
+                        <div class="info-div1">
+                            <P>Data de cadastro:</P>
+                            <p style="color: green;"><?php echo $_SESSION['joindateid'];?></p>
+                        </div>
+                        <div class="delete-acc">
+                            <a href="" class="delete-acc-link">DELETAR CONTA</a>
+                        </div>
+                        <div  class="user-img-div">
+                             <img class="user-img" src="../imgs/user.jpg" >
+                        </div> 
+                </div>   
         </div>
     </div>
 </header>

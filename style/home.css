@@ -92,7 +92,7 @@ body { font-family: 'Goblin One', cursive; background: #351d9e; height: 8000px;}
   }
   
   .dropdown .dropbtn {
-    position: relative;
+  position: relative;
 	font-size: 16px;  
 	border: none;
 	outline: none;
@@ -104,9 +104,7 @@ body { font-family: 'Goblin One', cursive; background: #351d9e; height: 8000px;}
   color: white;
   }
   
-  .navbar a:hover, .dropdown:hover .dropbtn {
-	background: rgb(34, 34, 34);
-  }
+  .navbar a:hover, .dropdown:hover .dropbtn {background: rgb(34, 34, 34);}
   
   .dropdown-content {
 	display: none;
@@ -156,7 +154,8 @@ body { font-family: 'Goblin One', cursive; background: #351d9e; height: 8000px;}
   margin: auto;
   border: 1px solid #888;
   height: 500px;
-  width: 40%;
+  width: 50%;
+  min-width: 33em;
   border-radius: 20px;
 }
 
@@ -169,7 +168,8 @@ body { font-family: 'Goblin One', cursive; background: #351d9e; height: 8000px;}
   float: right;
   font-size: 50px;
   font-weight: bold;
-  color: rgb(190, 0, 0)
+  color: rgb(190, 0, 0);
+  z-index: 999;
 }
 
 .close:hover{color: rgb(255, 0, 0);}
@@ -178,6 +178,65 @@ body { font-family: 'Goblin One', cursive; background: #351d9e; height: 8000px;}
   text-shadow: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.main-info-div{
+  position: relative; 
+  text-align: center;
+}
+
+.info-div1{
+  border:  5px solid white;
+  width: 25em;
+}
+
+.infotxt{
+  padding: 10px;
+  width: 25vh;
+  border:  5px solid white;
+}
+
+.infocode{
+  bottom: 43px;
+  left: 250px;
+  padding: 10px;
+  position: relative;
+  width: 25vh;
+  border: 5px solid white;
+}
+
+/* FOTO DO USUARIO */
+.user-img-div{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.user-img{
+  min-width: 8em;
+  width: 15vw;
+  border-radius: 0px 20px 0px 0px;
+}
+
+/* DELETE ACCOUNT LINK */
+.delete-acc{
+  position: relative;
+  left: 70px;
+  top: 50px;
+  float: left;
+}
+
+.delete-acc-link{
+  border: 1px solid white;
+  background-color: rgb(255, 0, 0);
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.delete-acc-link:hover{
+  background-color: rgb(155, 0, 0);
 }
  
 /********************SCROLL MOUSE********************/
