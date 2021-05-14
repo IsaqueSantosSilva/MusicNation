@@ -82,11 +82,11 @@ public function userLogin($email,$password){
   $data=$stmt->fetch(PDO::FETCH_OBJ);
   if($Count == 1){
    session_start();
-   $_SESSION['uid']=$data->UID; //SALVANDO O VALOR DE ID
-   $_SESSION['uname']=$data->USERNAME; //SALVANDO O VALOR DE NOME DE USUARIO
-   $_SESSION['emailid']=$data->EMAILID; //SALVANDO O VALOR DE EMAIL
-   $_SESSION['joindateid']=$data->JOINDATE; //SALVANDO O VALOR DE DATA DE CADASTRO
-   $_SESSION['passid']=$data->PASSWORD; //SALVANDO O VALOR DE SENHA
+   $_SESSION['uid']=$data->UID; 
+   $_SESSION['uname']=$data->USERNAME; 
+   $_SESSION['emailid']=$data->EMAILID; 
+   $_SESSION['joindateid']=$data->JOINDATE; 
+   $_SESSION['passid']=$data->PASSWORD; 
    $dbConnection = null ;
             return true;
       
