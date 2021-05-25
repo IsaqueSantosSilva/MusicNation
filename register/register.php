@@ -57,7 +57,7 @@ if (!empty($_POST['submitregistrationform'])) {
     <!-- CADASTRO -->
     <div class="content">
         <h1 style="text-align: center; color:wheat;">CRIAR CONTA</h1>
-        <form method="post" action="" name="register">
+        <form method="post" action="" name="register.php">
 
             <label class="labeltxt">Endereço de Email:</label>
             <input class="inputs" type="email" name="emailid"  require />

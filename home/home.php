@@ -1,5 +1,9 @@
-<?php session_start(); 
+<?php 
+
+session_start(); 
+
 include("../session/session.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +22,7 @@ include("../session/session.php");
 <body>
 <header>
         <div class="banner" >
-            <span class="txt1"> Music</span> 
+            <span class="txt1">Music</span> 
             <span class="txt2">Nation</span>
         </div>
 </header>
@@ -34,7 +38,6 @@ include("../session/session.php");
             <div class="dropdown-content">
                     <a style="cursor: pointer;" id="myBtn">Perfil</a>
                     <a href="../home/logout.php">Sair</a>
-                    
             </div>
         </div>
     </div>
