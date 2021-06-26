@@ -35,47 +35,44 @@ if (!empty($_POST['submitregistrationform'])) {
 
 <head>
     <link rel="stylesheet" type="text/css" href="../style/register.css">
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="../style/small-register.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
     <link rel="icon" href="../imgs/icon.png" style="width: 100%; height: 100%">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <meta name="Author" name="Isaque Silva">
-    <meta name="description" content="site de streaming de musicas">
+    <meta name="description" content="Achar letra de musicas com api">
     <meta charset="utf-8">
     <title>Music Nation - Criar Conta</title>
 </head>
 
 <body style="background: #341f97;">
     <!-- BANNER -->
-    <header>
-        <div class="banner" >
-            <span class="txt1"> Music</span> 
-            <span class="txt2">Nation</span>
-        </div>
-</header>
+  <header>
+    <div class="banner" >
+      <span class="txt1">Music</span> 
+      <span class="txt2">Nation</span>
+    </div>
+  </header>
     <!-- CADASTRO -->
     <div class="content">
-        <h1 style="text-align: center; color:wheat;">CRIAR CONTA</h1>
+        <div class="jointxt">
+        <span>ENTRAR</span>
+        </div>
         <form method="post" action="" name="register.php">
-
-            <label class="labeltxt">Endereço de Email:</label>
-            <input class="inputs" type="email" name="emailid"  require />
-
-            <label class="labeltxt">Nome de usuário:</label>
-            <input class="inputs" type="text" name="username" autocomplete="off" required/>
-
-            <label class="labeltxt">Senha:</label>
-            <input class="inputs" type="password" name="userpassowrd" required/>
-
-            <input type="submit" class="cadastrar" name="submitregistrationform" value="CRIAR CONTA">
+            <div><label class="labeltxt">Endereço de Email:</label></div>
+            <div><input class="inputs" type="email" name="emailid"  require /></div>
+            <div><label class="labeltxt">Nome de usuário:</label></div>
+            <div><input maxlength="10" class="inputs" type="text" name="username" autocomplete="off" required/></div>
+            <div><label class="labeltxt">Senha:</label></div>
+            <div><input class="inputs" type="password" name="userpassowrd" required/></div>
+            <div><input type="submit" class="cadastrar" name="submitregistrationform" value="CRIAR CONTA"></div>
             <a class="fazerloginbtt" href="../login/login.php">Fazer login</a>
-
             <div class="errorMsg"><?php echo $errorMessage; ?></div>
             <div class="sucessMsg"><?php echo $sucessMessage; ?></div>
         </form>
 
     </div>
 </body>
-
 </html>

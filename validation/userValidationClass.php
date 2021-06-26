@@ -9,17 +9,23 @@ $dbname ="musicnation"; // NOME DA DB
 $dbuser ="root"; // NOME DE USUARIO DO MYSQL
 $dbpass =""; // SENHA DO MYSQL
 
+// $dbhost ="sql104.epizy.com"; // NOME DO HOST
+// $dbname ="epiz_28067078_musicnation"; // NOME DA DB
+// $dbuser ="epiz_28067078"; // NOME DE USUARIO DO MYSQL
+// $dbpass ="fIHLQaheUEpBMX"; // SENHA DO MYSQL
+
 try {
 $dbConnection = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass); 
 $dbConnection->exec("set names utf8");
 $dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-return $dbConnection;       
+return $dbConnection;  
 }
 
 catch (PDOException $e) {
 echo 'Conexão falhou: ' . $e->getMessage();
-} 
 }
+}
+
 // LÓGICA E VALIDAÇÃO PARA A PÁGINA DE REGISTRO DE USUÁRIO
 public function userRegistration($username,$email,$password){
 

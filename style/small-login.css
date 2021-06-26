@@ -1,0 +1,25 @@
+.jointxt span{
+    font-size: 20px;
+}
+
+.content{
+	position: relative;
+	top: 100px;
+	margin: auto;
+	border: 2px solid white;
+	width: 400px;
+}
+
+.inputs{font-size: 20px;width: 90%;}
+
+.labeltxt{color: #ffff;font-size: 12px;}
+
+.entrar{
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 10px;
+}
+
+.fazerloginbtt{font-size: 0.8em;}
+
+.errorMsg{font-size: 0.5em;}

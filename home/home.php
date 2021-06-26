@@ -1,5 +1,8 @@
 <?php 
 
+// header("Content-Type: application/json");
+// header("Access-Control-Allow_origin: *");
+
 session_start(); 
 
 include("../session/session.php");
@@ -8,71 +11,109 @@ include("../session/session.php");
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="../style/home.css">
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="../style/small-home.css">
     <link rel="icon" href="../imgs/icon.png" style="width: 100%; height: 100%">
-    <meta name="Author" name="Isaque Silva">
+    <meta name="Author" name="Isaque Silva(ZekaBoga)">
+    <meta name="description" content="Achar letra de musicas com api">
     <meta charset="utf-8">
     <title>Music Nation</title>
 </head>
 
 <body>
+<!-- BANNER -->
 <header>
-        <div class="banner" >
-            <span class="txt1">Music</span> 
-            <span class="txt2">Nation</span>
+    <div class="banner" >
+        <span class="txt1">Music</span> 
+        <span class="txt2">Nation</span>
+    </div>
+</header>
+<!-- SECOND BANNER -->
+<header id="myHeader" class="secondbanner">
+    <div>
+        <form id="form">
+            <input type="text" id="search" placeholder="Insira nome da música ou artista" autocomplete="off">
+            <button class="scrbtn"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+    <!-- DROPDOWN -->
+    <div class="dropdown">
+        <button class="dropbtn"><?php echo $_SESSION['uname'];?> <i class="fas fa-chevron-down"></i></button>
+        <div class="dropdown-content">
+            <a href="#" id="myBtn">Perfil</a>
+            <a href="#" id="myBtn2">Sobre</a>
+            <a href="#" id="myBtn3">Sair</a>
         </div>
+    </div>
 </header>
 
-    <!-- USER SECTION -->
-    <div class="container">
-<header>
-    <div class="secondbanner" id="myHeader">
-        <div class="dropdown" class="myHeader">
-            <button class="dropbtn">
-                    <h4><?php echo $_SESSION['uname'] ; ?> <i class="fa fa-caret-down"></i></h4>
-                </button>
-            <div class="dropdown-content">
-                    <a style="cursor: pointer;" id="myBtn">Perfil</a>
-                    <a href="../home/logout.php">Sair</a>
+<!-- LYRICS CONTENT -->
+<div id="result" class="container">
+    <p>Resultados serão mostrados aqui</p>
+</div>
+<div id="more" class="centered"></div>
+
+<!-- MODAL -->
+<div id="meuModal" class="modal">
+  <!-- MODAL CONTENT -->
+  <div class="content-modal">
+    <span class="btn-fechar">&times;</span>
+        <div class="user-info-div">
+            <div class="user-info">
+                Nome de usuário: <span><?php echo $_SESSION['uname'];?></span>
             </div>
         </div>
-    </div>
-        <div class="srcsection" id="myHeader" class="myHeader">
-            <input class="srcbar" type="text" placeholder="Pesquisar...">
-            <input class="srcbtn" type="image"  src="../imgs/srcicon.png">
-        </div> 
-
-    <!-- MODAL -->
-    <div id="myModal" class="modal" class="myHeader">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-                <div class="main-info-div">
-                        <div class="info-div1" style="border-radius: 20px 0px 0px;">
-                            <p>Usuário:</p>
-                            <p style="color: green;"><?php echo $_SESSION['uname'];?></p>
-                        </div>
-                        <div class="info-div1">
-                            <P>Email:</P>
-                            <p style="color: green;"><?php echo $_SESSION['emailid'];?></p>
-                        </div>
-                        <div class="info-div1">
-                            <P>Data de cadastro:</P>
-                            <p style="color: green;"><?php echo $_SESSION['joindateid'];?></p>
-                        </div>
-                        <div class="delete-acc">
-                            <a href="" class="delete-acc-link">DELETAR CONTA</a>
-                        </div>
-                        <div  class="user-img-div">
-                             <img class="user-img" src="../imgs/user.jpg" >
-                        </div> 
-                </div>   
+        <div class="user-info-div">
+            <div class="user-info">
+                Endereço de email: <span><?php echo $_SESSION['emailid'];?></span>
+            </div>
         </div>
-    </div>
-</header>
-</body>
+        <div class="user-info-div">
+            <div class="user-info">
+                Data de cadastro: <span><?php echo $_SESSION['joindateid'];?></span>
+            </div>
+        </div>
+        <!-- FEED BACK AND DELETE BUTTON -->
+        <div class="delete-acc">
+            <a href="" class="delete-acc-link"><i class="fas fa-user-times"></i>DELETAR CONTA</a>
+            <a target="_blank" href="http://isaquesilva.infinityfreeapp.com/Feedback-Sender-PHPMailer/" class="feedback-link"><i class="fas fa-comment-dots"></i>ENVIAR FEEDBACK</a>
+        </div>
+    </div> 
+</div>
+
+<!-- MODAL SOBRE-->
+<div id="meuModal2" class="modal">
+  <!-- MODAL CONTENT -->
+    <div class="content-modal">
+    <span class="btn-fechar2">&times;</span>
+        <h2>Sobre</h2>
+        <h4>
+            Este projeto é totalmente dedicado a estudo.<br>
+            O objetivo é criar um website e usar uma API que 
+            ofereça letras de músicas e exibir essas informações.<br>
+            a API que escolhi é a 
+            <a class="lyrics-link" target="_blank" href="https://public-apis.io/lyrics-ovh-api">Lyrics.ovh</a> não
+            é a melhor mas foi a que consegui usar. Talvez um dos 
+            motivos de não ser muito boa seja pelo fato que é uma API pública.
+        </h4>
+    </div> 
+</div>
+
+<!-- MODAL SAIR-->
+<div id="meuModal3" class="modal">
+  <!-- MODAL CONTENT -->
+    <div class="content-modal3">
+        <question>Tem certeza que deseja sair?</question>
+        <div class="yes-no-btn">
+            <a class="yesbtn" href="logout.php"><i class="fas fa-check"></i>SIM</a>
+            <a class="btn-fechar3" id="nobtn" href=""><i class="fas fa-times"></i>NÃO</a>
+        </div>
+    </div> 
+</div>
+
+<script src="https://kit.fontawesome.com/bb44531651.js" crossorigin="anonymous"></script>
+<script src="../script/api.js"></script>
 <script src="../script/home.js"></script>
+</body>
 </html>

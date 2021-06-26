@@ -1,0 +1,38 @@
+input{margin-left: 120px; width: 50%;}
+
+div p{font-size: 15px;}
+
+.container{
+  width: 45vh;
+  padding: 15px;
+  margin: 30px auto;
+  margin-bottom: 20px;
+}
+
+.btn:active{transform: scale(0.95);}
+
+.centered{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 200px;
+}
+
+ul.songs{
+  list-style: none;
+  padding: 0;
+}
+
+ul.songs li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.dropbtn {padding: 19px 27px;font-size: 10px;}
+
+.dropdown {width: 140px;}
+
+.dropdown-content a {padding: 12px 20px;font-size: 15px;}
+
+.user-info{font-size: 10px;}

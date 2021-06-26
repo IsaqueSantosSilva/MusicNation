@@ -32,11 +32,13 @@ if (!empty($_POST['submitloginform'])) {
 
 <head>
     <link rel="stylesheet" type="text/css" href="../style/login.css">
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="../style/small-login.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
     <link rel="icon" href="../imgs/icon.png" style="width: 100%; height: 100%">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Author" name="Isaque Silva">
+    <meta name="description" content="Achar letra de musicas com api">
     <meta charset="utf-8">
     <title>Music Nation - Entrar</title>
 </head>
@@ -44,32 +46,26 @@ if (!empty($_POST['submitloginform'])) {
 <body>
 <header>
         <div class="banner" >
-            <span class="txt1"> Music</span> 
+            <span class="txt1">Music</span> 
             <span class="txt2">Nation</span>
         </div>
 </header>
-    <!-- BANNER -->
-    <header>
-        <div class="banner">
-            <a class="text1"> MusicNation </a>
-        </div>
-    </header>
-    <!-- CADASTRO -->
+
+    <!-- FORM -->
     <div class="content">
-        <h1> ENTRAR </h1>
+        <div class="jointxt">
+        <span>ENTRAR</span>
+        </div>
         <form class="inputform" method="post" action="" name="login.php">
-            <label class="labeltxt">Endereço de Email:</label> 
-            <input class="inputs" type="text" name="emailid" required /> 
-
-            <label class="labeltxt">Senha:</label> 
-            <input class="inputs" type="password" name="userpassowrd" required /> 
-
-            <input type="submit" class="entrar" name="submitloginform" value="ENTRAR"/> 
+            <div><label class="labeltxt">Endereço de Email:</label> </div>
+            <div><input class="inputs" type="text" name="emailid" required /></div>
+            <div><label class="labeltxt">Senha:</label> </div>
+            <div><input class="inputs" type="password" name="userpassowrd" required /> </div>
+            <div><input type="submit" class="entrar" name="submitloginform" value="ENTRAR"/> </div>
             <a class="fazerloginbtt" href="../register/register.php">Criar Conta</a>
             <div class="errorMsg"><?php echo $errorMessage;?></div>
         </form>
     </div>
-
 </body>
 
 </html>

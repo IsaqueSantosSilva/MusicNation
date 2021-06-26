@@ -2,258 +2,307 @@
 @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
 
-* { margin: 0; padding: 0;}
+* {margin: 0; padding: 0;}
 
-body { font-family: 'Goblin One', cursive; background: #351d9e; height: 8000px;}
+body { 
+  font-family: 'Goblin One', cursive;
+  background: #351d9e;
+}
 
 /********************BANNER********************/
 .banner {
   user-select: none;
-  background-color: rgb(0, 0, 0);
-  width: 100%;
-  padding: 80px 0;
+  background-color: rgb(2, 2, 5);
   text-align: center;
 }
 
- .txt1 {
+.txt1 {
   color: rgb(255, 255, 255);
-  font-size: 10vh;
+  font-size: 6vw;
   font-family: 'Galindo', cursive;
-  text-shadow: 1px 1px 40px  rgb(255, 255, 255);
+  text-shadow: 1px 1px 30px  rgb(255, 255, 255);
 }
 .txt2{
   color: rgb(90, 189, 255);
-  font-size: 10vh;
+  font-size: 6vw;
   font-family: 'Train One', cursive;
   text-shadow: 1px 1px 40px  rgb(90, 189, 255);
 }
 
 /********************SECOND BANNER********************/
+.secondbanner{
+  height: 50px;
+  background: #535353;
+}
 
+/********************STICKY********************/
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-.secondbanner{
-  width: 100%;
-  height:  47px;
-  background: #414141;
-  text-align: right;
-}
-
-.sticky + .content {padding-top: 10px;}
-
-.srcbar{
-  width: 30%;
-  position: relative;
-  height: 30px;
+#form{
   text-align: center;
+  padding: 5px;
 }
-.srcbtn{
-  position: fixed relative;
-  width: 30px;
-  top: 10px;
-  border: 1px solid black;
+
+input{
+  margin-left: 50px; 
+  font-family: 'Goblin One', cursive;
+  width: 410px;
+  padding: 10px 22px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.scrbtn{
+  position: relative;
+  right: 63px; 
+  border-radius: 0px 5px 5px 0px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.scrbtn:hover{
+  background-color: rgb(141, 141, 141);
+}
+
+/********************MAIN CONTENT********************/
+.container{
+  width: 80vh;
+  padding: 20px;
+  margin: 30px auto;
+  background-color: white;
   border-radius: 10px;
+  box-shadow: 5px 1px 10px rgb(0, 0, 0);
+  margin-bottom: 20px;
 }
 
-.srcsection{
-  position: relative;
-  bottom: 50px;
-  right: 50px;
-  text-align: right;
-}
+.container p{text-align: center;}
 
-.srcbtn:active{border: 1px solid green;}
-
-/********************USER SECTION********************/
-
- .navbar {
-	overflow: hidden;
-	background: #333;
-  }
-  
-  .navbar a {
-	float: left;
-	font-size: 16px;
-	text-shadow: rgb(255, 255, 255);
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-  }
-  
-  .dropdown {
-  top: 0;
-	float: left;
-	overflow: hidden;
-	background: rgb(46, 46, 46);
-  }
-  
-  .dropdown .dropbtn {
-  position: relative;
-	font-size: 16px;  
-	border: none;
-	outline: none;
-	text-shadow: white;
-	padding: 14px 16px;
-	background: inherit;
-	font-family: inherit;
-	margin: 0;
+.btn{
+  font-family: 'Goblin One', cursive;
+  background-color: rgb(165, 0, 165);
   color: white;
-  }
-  
-  .navbar a:hover, .dropdown:hover .dropbtn {background: rgb(34, 34, 34);}
-  
-  .dropdown-content {
-	display: none;
-	position: absolute;
-	background: #f9f9f9;
-	min-width: 100px;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  }
-  
-  .dropdown-content a {
-	float: none;
-	text-shadow: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-	text-align: left;
-  color: rgb(0, 0, 0);
-  }
-  
-  .dropdown-content a:hover {
-	background: rgb(94, 94, 94);
-  }
-  
-  .dropdown:hover .dropdown-content {display: block;}
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+}
 
- /********************MODAL********************/
+.btn:active{transform: scale(0.95);}
 
+.centered{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 200px;
+}
+
+ul.songs{
+  list-style: none;
+  padding: 0;
+}
+
+ul.songs li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+/********************DROPDOWN********************/
+
+.dropbtn {
+  background: #313131;
+  color: #ffffff;
+  padding: 16px 27px;
+  font-size: 16px;
+  border: none;
+  width: 0 auto;
+}
+
+.dropdown {
+  position: relative;
+  bottom: 51px;
+  width: 168px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #f1f1f1;
+  box-shadow: 0px 8px 10px 0px #000000;
+}
+
+.dropdown-content a {
+  color: #000000;
+  padding: 12px 40px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: rgb(129, 129, 129);}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background: rgb(70, 70, 70);}
+
+/********************MODAL********************/
+
+.content-modal {
+  background-color: #000000;
+  margin: auto;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 8px 10px 0px #000000;
+  border-radius: 10px;
+  width: 30vmax;
+  min-height: 25%;
+  padding: 50px;
+  color: white;
+}
+
+/* MODAL BACKGROUND */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 999; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  padding-top: 150px; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background:rgb(0,0,0); /* Fallback color */
-  background: rgba(0,0,0,0.4); /* Black w/ opacity */
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 1px 1px #000000;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: #00000066;
 }
 
-/* Modal Content */
-.modal-content {
-  background: #000000;
-  margin: auto;
-  border: 1px solid #888;
-  height: 500px;
-  width: 50%;
-  min-width: 33em;
-  border-radius: 20px;
-}
-
-/* The Close Button */
-.close {
-  top: 10px;
-  right: 5px;
+/* CLOSE BOTTON */
+.btn-fechar, .btn-fechar2 {
   position: relative;
-  text-shadow: 1px 1px 1px #000000;
+  bottom: 60px;
+  left: 40px;
+  color: #a10000;
   float: right;
   font-size: 50px;
   font-weight: bold;
-  color: rgb(190, 0, 0);
-  z-index: 999;
 }
 
-.close:hover{color: rgb(255, 0, 0);}
-
-.close:hover, .close:focus {
-  text-shadow: #000;
+.btn-fechar:hover,
+.btn-fechar:focus,
+.btn-fechar2:hover,
+.btn-fechar2:focus {
+  color: rgb(255, 0, 0);
   text-decoration: none;
   cursor: pointer;
 }
 
-.main-info-div{
-  position: relative; 
+/* MODAL USER INFO */
+
+span{color: green;}
+
+.user-info-div{display: block;}
+
+.user-info{
+  font-size: 2.5vh;
+  border: 1px solid white;
+  margin: auto;
+  width: 70%;
+  padding: 10px;
   text-align: center;
 }
 
-.info-div1{
-  border:  5px solid white;
-  width: 25em;
-}
-
-.infotxt{
-  padding: 10px;
-  width: 25vh;
-  border:  5px solid white;
-}
-
-.infocode{
-  bottom: 43px;
-  left: 250px;
-  padding: 10px;
-  position: relative;
-  width: 25vh;
-  border: 5px solid white;
-}
-
-/* FOTO DO USUARIO */
-.user-img-div{
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.user-img{
-  min-width: 8em;
-  width: 15vw;
-  border-radius: 0px 20px 0px 0px;
-}
-
-/* DELETE ACCOUNT LINK */
+/* FEED BACK AND DELETE BUTTON STYLE */
 .delete-acc{
   position: relative;
-  left: 70px;
-  top: 50px;
-  float: left;
+  top: 30px;
+  text-align: center;
+  user-select: none;
 }
 
 .delete-acc-link{
-  border: 1px solid white;
-  background-color: rgb(255, 0, 0);
-  padding: 20px;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
+  color: #fffdfd;
+  background: #ff0000;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 0.8vmax;
   text-decoration: none;
-  transition: 0.5s;
 }
 
-.delete-acc-link:hover{
-  background-color: rgb(155, 0, 0);
+.feedback-link{
+  color: #fffdfd;
+  background: #b700ff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 0.8vmax;
+  text-decoration: none;
 }
- 
-/********************SCROLL MOUSE********************/
 
-::-webkit-scrollbar {
-	width: 15px;
-  }
-  
-  ::-webkit-scrollbar-track {
-	background: #f1f1f1;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-	background: #888;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-	background: rgb(43, 43, 43);
-  }
+/* SOBRE MODAL CONTENT */
+div h2{
+  padding-bottom: 10px;
+  font-size: 2vw;
+}
 
+div h4{
+  padding: 10px;
+  font-size: 1.5vmax;
+}
+
+/* SAIR MODAL CONTENT */
+
+.yes-no-btn{
+  position: relative;
+  top: 20px;
+}
+
+.yesbtn{
+  border: 0;
+  width: 150px;
+  height: 100px;
+  padding: 15px;
+  background-color: #00c200;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+#nobtn{
+  border: 0;
+  width: 150px;
+  height: 100px;
+  padding: 15px;
+  background-color: #ff0000;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.content-modal3 {
+  background-color: #000000;
+  margin: auto;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 8px 10px 0px #000000;
+  border-radius: 10px;
+  width: 200px;
+  height: 80px;
+  padding: 50px;
+  color: white;
+}
+
+
+.delete-acc-link:hover{background: #ff3b3b;}
+.feedback-link:hover{background: #c83eff;}
+
+.lyrics-link{color: blue;}
+.lyrics-link:hover{color: rgb(44, 44, 255);}
+
+/********************SCROLL BAR STYLE********************/
+
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-track {background: #f1f1f1;}
+::-webkit-scrollbar-thumb {background: #888;}
+::-webkit-scrollbar-thumb:hover {background: rgb(43, 43, 43);}
