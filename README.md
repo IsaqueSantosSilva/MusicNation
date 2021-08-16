@@ -1,4 +1,0 @@
-# MusicNation
-
-
-Not ready yet.
