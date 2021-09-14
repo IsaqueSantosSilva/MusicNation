@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Galindo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Train+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Goblin+One&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s;
+    font-family: "Goblin One", cursive;
+}
+
+body {
+    background-image: url('https://i.ibb.co/W5g9PZ0/Guitar-musical-wood-background-1920x1200.jpg');
+    /* background: #351d9e; */
+    background-position: center;
+}
+
+/* Top Header */
+.topHeader {
+    background-color: #020205;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner {
+    user-select: none;
+    text-align: center;
+}
+
+.txt1 {
+    color: #ffffff;
+    font-size: 4vmax;
+    font-family: "Galindo", cursive;
+    text-shadow: 1px 1px 30px #ffffff;
+}
+
+.txt2 {
+    color: #5abdff;
+    font-size: 4vmax;
+    font-family: "Train One", cursive;
+    text-shadow: 1px 1px 30px #5abdff;
+}
+
+.secondHeader div {
+    margin: 10px;
+}
+
+/* Search input/button Style */
+.search_div {
+    margin: 1%;
+}
+
+.search_div input {
+    box-shadow: 0px 0px 2px black;
+    padding: 7px;
+    outline: none;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.search_div input:focus {
+    background-color: #979797;
+}
+
+.search_div button {
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    padding: 7px;
+    background: #ebebeb;
+    border-radius: 0 5px 5px 0;
+}
+
+.search_div button:hover {
+    background: #c0c0c0;
+}
+
+/* Results Container */
+.container {
+    margin: auto;
+    border-radius: 5px;
+    background: white;
+    max-width: 50%;
+    min-width: 450px;
+    height: 80vh;
+    padding: 20px;
+    box-shadow: 0px 0px 5px black;
+    font-size: 14px;
+    overflow-y: auto;
+    opacity: 0.9;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    background: purple;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    z-index: 1;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}
+
+ul.songs {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.songs li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.spacing {
+    height: 100px;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+footer {
+    width: 100%;
+    background: #111;
+    z-index: -1;
+}
+
+footer center{
+    color: white;
+    padding: 20px 0;
+}
+
+
+/* Modal Style */
+.modal h4 {
+    padding-bottom: 50px;
+}
+
+.aboutModal{
+    max-width: 900px;
+}
+
+.yes_btn,
+.no_btn {
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#more {
+    display: none;
+}
+
+.yes_btn:hover{
+    transform: scale(1.1);
+}
+
+
+.yes_btn {
+    background: green;
+
+}
+
+.no_btn {
+    background: red;
+}
+
+/********************Feedback Button Style********************/
+.feedback_btn {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+}
+
+.about{
+    bottom: 80px;
+}
+
+.feedback_btn img {
+    width: 40px;
+    box-shadow: 0px 0px 5px white;
+    border-radius: 50px;
+}
+
+.feedback_btn img:hover {
+    transform: scale(1.2);
+}
+
+.copy_container{
+    max-width: 50%;
+    min-width: 450px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.copy_container a{
+    background-color: #00b300;
+    color: white;
+    text-decoration: none;
+    padding: 3px 20px;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}
+
+.copy_container a:hover{
+    background-color: #009700;
+    transform: scale(1.1);
+}
+
+#input_content{
+    visibility: hidden;
+}
+
+
+@media only screen and (min-width: 1000px) {
+    .txt1,
+    .txt2 {
+        font-size: 3vmax;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        font-size: 12px;
+    }
+    .btn {
+        font-size: 12px;
+        padding: 3px;
+    }
+    .feedback_btn img {
+        width: 25px;
+    }
+    .aboutModal p{
+        font-size: 12px;
+    }
+    .aboutModal li{
+        font-size: 12px;
+    }
+    .modal h4{
+        padding-bottom: 20px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
