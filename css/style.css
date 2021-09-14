@@ -11,7 +11,7 @@
 }
 
 body {
-    background-image: url('https://i.ibb.co/W5g9PZ0/Guitar-musical-wood-background-1920x1200.jpg');
+    background-image: url("https://i.ibb.co/W5g9PZ0/Guitar-musical-wood-background-1920x1200.jpg");
     /* background: #351d9e; */
     background-position: center;
 }
@@ -133,18 +133,17 @@ footer {
     z-index: -1;
 }
 
-footer center{
+footer center {
     color: white;
     padding: 20px 0;
 }
-
 
 /* Modal Style */
 .modal h4 {
     padding-bottom: 50px;
 }
 
-.aboutModal{
+.aboutModal {
     max-width: 900px;
 }
 
@@ -162,14 +161,12 @@ footer center{
     display: none;
 }
 
-.yes_btn:hover{
+.yes_btn:hover {
     transform: scale(1.1);
 }
 
-
 .yes_btn {
     background: green;
-
 }
 
 .no_btn {
@@ -183,7 +180,7 @@ footer center{
     right: 20px;
 }
 
-.about{
+.about {
     bottom: 80px;
 }
 
@@ -197,7 +194,7 @@ footer center{
     transform: scale(1.2);
 }
 
-.copy_container{
+.copy_container {
     max-width: 50%;
     min-width: 450px;
     margin: auto;
@@ -205,7 +202,7 @@ footer center{
     justify-content: flex-end;
 }
 
-.copy_container a{
+.copy_container a {
     background-color: #00b300;
     color: white;
     text-decoration: none;
@@ -214,15 +211,14 @@ footer center{
     margin-bottom: 3px;
 }
 
-.copy_container a:hover{
+.copy_container a:hover {
     background-color: #009700;
     transform: scale(1.1);
 }
 
-#input_content{
+#input_content {
     visibility: hidden;
 }
-
 
 @media only screen and (min-width: 1000px) {
     .txt1,
@@ -242,13 +238,13 @@ footer center{
     .feedback_btn img {
         width: 25px;
     }
-    .aboutModal p{
+    .aboutModal p {
         font-size: 12px;
     }
-    .aboutModal li{
+    .aboutModal li {
         font-size: 12px;
     }
-    .modal h4{
+    .modal h4 {
         padding-bottom: 20px;
     }
 }
