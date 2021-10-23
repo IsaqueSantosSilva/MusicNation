@@ -10,9 +10,8 @@ It Lives!
 
 <br />
 
-- [x] Responsive Design
+ <img alt="" width="1000" src="https://github.com/ZekaBoga/MusicNation/blob/main/images/portofolio2.png">
 
-<br />
 <br />
 
 Link to prototype: [MusicNation.com](http://isaquesilva.infinityfreeapp.com/MusicNation/)
