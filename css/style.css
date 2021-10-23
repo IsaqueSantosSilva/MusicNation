@@ -6,27 +6,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: 0.2s;
     font-family: "Goblin One", cursive;
 }
 
 body {
-    background-image: url("https://i.ibb.co/W5g9PZ0/Guitar-musical-wood-background-1920x1200.jpg");
-    /* background: #351d9e; */
-    background-position: center;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* Top Header */
 .topHeader {
-    background-color: #020205;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.banner {
-    user-select: none;
+    background-color: #000006;
     text-align: center;
+    user-select: none;
 }
 
 .txt1 {
@@ -43,53 +36,55 @@ body {
     text-shadow: 1px 1px 30px #5abdff;
 }
 
-.secondHeader div {
-    margin: 10px;
-}
-
 /* Search input/button Style */
 .search_div {
-    margin: 1%;
+    display: flex;
+    justify-content: center;
+    background-color: #111;
+    padding: 0.5rem 0;
 }
 
-.search_div input {
-    box-shadow: 0px 0px 2px black;
-    padding: 7px;
-    outline: none;
-    border: none;
-    border-radius: 5px 0 0 5px;
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+form {
+    display: flex;
 }
 
-.search_div input:focus {
-    background-color: #979797;
-}
-
-.search_div button {
-    border: none;
-    position: absolute;
+button {
+    padding: 0.5rem;
     cursor: pointer;
-    padding: 7px;
-    background: #ebebeb;
-    border-radius: 0 5px 5px 0;
 }
 
-.search_div button:hover {
-    background: #c0c0c0;
-}
+input[type=text] {
+    width: 100%;
+    max-width: 400px;
+    outline: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding:5px 20px; 
+  }
+  
+  /* input[type=text]:focus {
+    width: 100%;
+  } */
+
 
 /* Results Container */
 .container {
     margin: auto;
     border-radius: 5px;
     background: white;
-    max-width: 50%;
-    min-width: 450px;
-    height: 80vh;
-    padding: 20px;
-    box-shadow: 0px 0px 5px black;
+    width: 100%;
+    max-width: 60rem;
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+    box-shadow: 0px 0px 5px #000;
     font-size: 14px;
-    overflow-y: auto;
-    opacity: 0.9;
+    margin-bottom: 5rem;
 }
 
 .btn {
@@ -140,11 +135,7 @@ footer center {
 
 /* Modal Style */
 .modal h4 {
-    padding-bottom: 50px;
-}
-
-.aboutModal {
-    max-width: 900px;
+    padding-bottom: 3rem;
 }
 
 .yes_btn,

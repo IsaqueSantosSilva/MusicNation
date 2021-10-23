@@ -1,98 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <!-- jQuery Modal -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <meta charset="utf-8" />
-        <title>MusicNation</title>
-    </head>
+<head>
+    <!-- jQuery Modal -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
-    <body>
-        <!-- BANNER -->
-        <header class="topHeader">
-            <div class="banner">
-                <span class="txt1">Music</span>
-                <span class="txt2">Nation</span>
-            </div>
-        </header>
-        <!-- Search Style  -->
-        <div class="search_div">
-            <form id="form">
-                <p id="errortxt"></p>
-                <input type="text" id="search" placeholder="Search song or artist" autocomplete="off" />
-                <button class="scrbtn"><i class="fas fa-search"></i></button>
-            </form>
-        </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <meta charset="utf-8" />
+    <title>MusicNation</title>
+</head>
 
-        <!-- Result of songs -->
-        <div class="copy_container" id="copy_div">
-            <!-- <a href="" onclick="myFunction()"><p id="copy" class="copy_lyrics ">Copiar Letra</p></a> -->
-        </div>
-        <div id="result" class="container">
-            <center><p>Resultados serão mostrados aqui</p></center>
-        </div>
+<body>
+    <!-- BANNER -->
+    <header class="topHeader">
+        <span class="txt1">Music</span>
+        <span class="txt2">Nation</span>
+    </header>
+    <!-- Search Style  -->
+    <div class="search_div" id="secondTopHeader">
+        <form id="form">
+            <input id="search" type="text" placeholder="Procurar..">
+            <button class="scrbtn"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
 
-        <input type="text" value="" id="input_content" />
+    <!-- Result of songs -->
+    <div id="result" class="container">
+        <center>
+            <p>Resultados serão mostrados aqui</p>
+        </center>
+    </div>
 
-        <div id="more" class="centered"></div>
+    <div id="more" class="centered"></div>
 
-        <!-- Feedback Sender Button -->
-        <div class="feedback_btn">
-            <abbr title="Enviar Feedback">
-                <a href="#ex1" rel="modal:open"><img src="https://i.ibb.co/41dqFTc/clipart1415636.png" /></a>
-            </abbr>
-        </div>
+    <!-- Feedback Sender Button -->
+    <div class="feedback_btn">
+        <abbr title="Enviar Feedback">
+            <a href="#ex1" rel="modal:open"><img src="images/feeback.png" /></a>
+        </abbr>
+    </div>
 
-        <!-- About button -->
-        <div class="feedback_btn about">
-            <abbr title="Sobre">
-                <a href="#ex2" rel="modal:open"><img src="https://image.flaticon.com/icons/png/512/189/189664.png" /></a>
-            </abbr>
-        </div>
+    <!-- Modals -->
+    <div id="ex1" class="modal">
+        <h4>Deseja enviar Feedback?</h4>
+        <a href="http://isaquesilva.infinityfreeapp.com/Feedback-Sender-PHPMailer/" target="_blank"
+            class="yes_btn">Sim</a>
+        <a href="#" rel="modal:close" class="no_btn">Não</a>
+    </div>
 
-        <div class="spacing"></div>
+    <!-- Font Awsome -->
+    <script src="https://kit.fontawesome.com/bb44531651.js" crossorigin="anonymous"></script>
+    <!-- jQuery :) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
-        <!-- Modals -->
-        <div id="ex1" class="modal">
-            <h4>Deseja enviar Feedback?</h4>
-            <a href="http://isaquesilva.infinityfreeapp.com/Feedback-Sender-PHPMailer/" target="_blank" class="yes_btn">Sim</a>
-            <a href="#" rel="modal:close" class="no_btn">Não</a>
-        </div>
-        <div id="ex2" class="modal aboutModal">
-            <center><h4>Sobre</h4></center>
-            <p>
-                <i>Music Nation</i> é um projeto de paixão que venho tentando fazer sair da cabeça a algum tempo, devido a alguns problemas com a api usada "<a href="https://lyricsovh.docs.apiary.io/#">Lyrics.ovh</a>" houve atrasos mas
-                finalmente posso dizer que está pronto.
-            </p>
-            <br />
-            <p>
-                Ah, sim! a ideia é pesquisar por artistas ou músicas e receber as letras. Tentai ai pow!.
-            </p>
-            <br />
-            <p>
-                Problemas Conhecidos:
-            </p>
-            <br />
-            <p>
-                <li>Conteúdo da copia para área de tranferência não está indentado.</li>
-            </p>
-        </div>
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 
-        <footer>
-            <center>Created by Isaque Silva(ZekaBoga). © 2021</center>
-        </footer>
+    <script src="script/api.js"></script>
+    <script src="script/script.js"></script>
 
-        <!-- Font Awsome -->
-        <script src="https://kit.fontawesome.com/bb44531651.js" crossorigin="anonymous"></script>
-        <!-- jQuery :) -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+</body>
 
-        <!-- jQuery Modal -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-
-        <script src="script/api.js"></script>
-        <script src="script/script.js"></script>
-    </body>
 </html>

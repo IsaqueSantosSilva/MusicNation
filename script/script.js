@@ -1,11 +1,13 @@
-// Function to copy lyrics to clipboard
-function CopyToClipBoard() {
-  var copyText = document.getElementById("input_content");
+// Sticky Header
+window.onscroll = function() {myFunction()};
 
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); //For mobile devices
+var header = document.getElementById("secondTopHeader");
+var sticky = header.offsetTop;
 
-  navigator.clipboard.writeText(copyText.value);
-
-  alert("Letra Copiada!");
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
 }
