@@ -10,7 +10,7 @@ It Lives!
 
 <br />
 
- <img alt="" width="1000" src="https://github.com/ZekaBoga/MusicNation/blob/main/images/portofolio2.png">
+ <img alt="" width="1000" src="https://github.com/IsaqueSantosSilva/MusicNation/blob/main/images/portofolio2.png">
 
 <br />
 
