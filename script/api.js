@@ -22,8 +22,7 @@ function showData(data) {
       ${data.data.map(
           (song) => `<li>
       <span><strong>${song.artist.name}</strong> - ${song.title}</span>
-      <button class="btn" data-artist="${song.artist.name}" data-songtitle="${song.title}"><span>Ver Letra</span> 
-      <i class="fas fa-chevron-circle-right"></i></button>
+      <button class="btn" data-artist="${song.artist.name}" data-songtitle="${song.title}">Ver Letra</button>
     </li>`
           )
           .join("")}

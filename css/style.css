@@ -196,18 +196,25 @@ h2 {
   .container {
     padding: 0.5rem 0.5rem;
     margin-top: 0.5rem;
-    font-size: 12px;
+    font-size: 10px;
     margin-bottom: 3rem;
   }
 
   .btn {
     border-radius: 3px;
-    padding: 5px 15px;
+    padding: 3px 10px;
     transition: 0.2s;
   }
 
-  .btn span {
-    display: none;
+  .btn {
+    font-size: 0;
+  }
+
+  .btn::after {
+    content: ">";
+    padding: 0;
+    font-size: 15px;
+    font-weight: 0;
   }
 
   .modal {
