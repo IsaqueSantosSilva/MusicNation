@@ -19,6 +19,9 @@ body {
 .topHeader {
   background-color: #000006;
   text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -95,7 +98,7 @@ form {
   border: none;
   cursor: pointer;
   background: #800080;
-  color: white;
+  color: #fff;
   border-radius: 5px;
   padding: 5px;
   transition: 0.2s;
@@ -133,7 +136,7 @@ h2 {
 
 .yes_btn,
 .no_btn {
-  color: white;
+  color: #fff;
   border-radius: 5px;
   padding: 5px;
   cursor: pointer;
@@ -207,15 +210,6 @@ h2 {
 
   .btn span {
     display: none;
-  }
-
-  ul.songs li {
-    margin: 10px 0;
-  }
-
-  h2 {
-    text-align: center;
-    padding-bottom: 50px;
   }
 
   .modal {
