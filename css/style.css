@@ -3,252 +3,244 @@
 @import url("https://fonts.googleapis.com/css2?family=Goblin+One&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Goblin One", cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Goblin One", cursive;
 }
 
 body {
-    background-image: url("../images/background.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* Top Header */
 .topHeader {
-    background-color: #000006;
-    text-align: center;
-    user-select: none;
+  background-color: #000006;
+  text-align: center;
+  user-select: none;
 }
 
 .txt1 {
-    color: #ffffff;
-    font-size: 4vmax;
-    font-family: "Galindo", cursive;
-    text-shadow: 1px 1px 30px #ffffff;
+  color: #ffffff;
+  font-size: 3rem;
+  font-family: "Galindo", cursive;
+  text-shadow: 1px 1px 30px #ffffff;
 }
 
 .txt2 {
-    color: #5abdff;
-    font-size: 4vmax;
-    font-family: "Train One", cursive;
-    text-shadow: 1px 1px 30px #5abdff;
+  color: #5abdff;
+  font-size: 3rem;
+  font-family: "Train One", cursive;
+  text-shadow: 1px 1px 30px #5abdff;
 }
 
 /* Search input/button Style */
 .search_div {
-    display: flex;
-    justify-content: center;
-    background-color: #111;
-    padding: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  background-color: #111;
+  padding: 0.5rem 0;
 }
 
 .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 
 form {
-    display: flex;
+  display: flex;
 }
 
-button {
-    padding: 0.5rem;
-    cursor: pointer;
+.scrbtn {
+  padding: 0.3rem;
+  cursor: pointer;
+  font-size: 20px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 0px 4px 4px 0px;
 }
 
-input[type=text] {
-    width: 100%;
-    max-width: 400px;
-    outline: none;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    padding:5px 20px; 
-  }
-  
-  /* input[type=text]:focus {
-    width: 100%;
-  } */
+.scrbtn:hover .scrbtn i {
+  display: none;
+}
 
+.search_input {
+  width: 100%;
+  max-width: 400px;
+  padding: 5px 20px;
+  border: none;
+  outline: none;
+  border-radius: 4px 0px 0px 4px;
+}
 
 /* Results Container */
 .container {
-    margin: auto;
-    border-radius: 5px;
-    background: white;
-    width: 100%;
-    max-width: 60rem;
-    padding: 0.5rem 1rem;
-    margin-top: 2rem;
-    box-shadow: 0px 0px 5px #000;
-    font-size: 14px;
-    margin-bottom: 5rem;
+  margin: auto;
+  border-radius: 5px;
+  background: white;
+  width: 95%;
+  max-width: 60rem;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+  box-shadow: 0px 0px 5px #000;
+  font-size: 14px;
+  margin-bottom: 5rem;
 }
 
 .btn {
-    border: none;
-    cursor: pointer;
-    background: purple;
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
-    z-index: 1;
+  border: none;
+  cursor: pointer;
+  background: #800080;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.2s;
 }
 
 .btn:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 ul.songs {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 ul.songs li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
 }
 
 .spacing {
-    height: 100px;
+  height: 100px;
 }
 
 h2 {
-    text-align: center;
-    padding-bottom: 50px;
-}
-
-footer {
-    width: 100%;
-    background: #111;
-    z-index: -1;
-}
-
-footer center {
-    color: white;
-    padding: 20px 0;
+  text-align: center;
+  padding-bottom: 50px;
 }
 
 /* Modal Style */
 .modal h4 {
-    padding-bottom: 3rem;
+  padding-bottom: 3rem;
 }
 
 .yes_btn,
 .no_btn {
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
-    cursor: pointer;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-#more {
-    display: none;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  text-decoration: none;
 }
 
 .yes_btn:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .yes_btn {
-    background: green;
+  background: green;
 }
 
 .no_btn {
-    background: red;
+  background: red;
 }
 
 /********************Feedback Button Style********************/
 .feedback_btn {
-    position: fixed;
-    bottom: 30px;
-    right: 20px;
-}
-
-.about {
-    bottom: 80px;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
 }
 
 .feedback_btn img {
-    width: 40px;
-    box-shadow: 0px 0px 5px white;
-    border-radius: 50px;
+  width: 40px;
+  box-shadow: 0px 0px 5px white;
+  border-radius: 50px;
 }
 
 .feedback_btn img:hover {
-    transform: scale(1.2);
-}
-
-.copy_container {
-    max-width: 50%;
-    min-width: 450px;
-    margin: auto;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.copy_container a {
-    background-color: #00b300;
-    color: white;
-    text-decoration: none;
-    padding: 3px 20px;
-    border-radius: 5px;
-    margin-bottom: 3px;
-}
-
-.copy_container a:hover {
-    background-color: #009700;
-    transform: scale(1.1);
-}
-
-#input_content {
-    visibility: hidden;
-}
-
-@media only screen and (min-width: 1000px) {
-    .txt1,
-    .txt2 {
-        font-size: 3vmax;
-    }
+  transform: scale(1.2);
 }
 
 @media only screen and (max-width: 600px) {
-    .container {
-        font-size: 12px;
-    }
-    .btn {
-        font-size: 12px;
-        padding: 3px;
-    }
-    .feedback_btn img {
-        width: 25px;
-    }
-    .aboutModal p {
-        font-size: 12px;
-    }
-    .aboutModal li {
-        font-size: 12px;
-    }
-    .modal h4 {
-        padding-bottom: 20px;
-    }
-}
+  .txt1,
+  .txt2 {
+    font-size: 2rem;
+  }
 
-::-webkit-scrollbar {
-    width: 10px;
-}
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-::-webkit-scrollbar-thumb {
-    background: #888;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  .search_div {
+    padding: 0.5rem 0;
+  }
+
+  .scrbtn {
+    padding: 0.1rem;
+    font-size: 17px;
+    border-radius: 0px 3px 3px 0px;
+  }
+
+  .search_input {
+    padding: 0px 5px;
+    border-radius: 3px 0px 0px 3px;
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 0.5rem 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 12px;
+    margin-bottom: 3rem;
+  }
+
+  .btn {
+    border-radius: 3px;
+    padding: 5px 15px;
+    transition: 0.2s;
+  }
+
+  .btn span {
+    display: none;
+  }
+
+  ul.songs li {
+    margin: 10px 0;
+  }
+
+  h2 {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  .modal {
+    padding: 0.5rem;
+  }
+
+  .modal h4 {
+    padding-bottom: 1rem;
+    font-size: 11px;
+  }
+
+  .yes_btn,
+  .no_btn {
+    border-radius: 3px;
+    padding: 5px;
+    margin: 0 5px;
+    font-size: 10px;
+  }
+
+  .feedback_btn {
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .feedback_btn img {
+    width: 25px;
+  }
 }

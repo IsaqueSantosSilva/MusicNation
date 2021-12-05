@@ -1,7 +1,7 @@
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 const result = document.getElementById("result");
-const more = document.getElementById("more");
+// const more = document.getElementById("more");
 const inputContent = document.getElementById("input_content");
 const copy_div = document.getElementById("copy_div");
 
@@ -19,25 +19,25 @@ async function searchSongs(term) {
 function showData(data) {
     result.innerHTML = `
     <ul class="songs">
-      ${data.data
-          .map(
-              (song) => `<li>
+      ${data.data.map(
+          (song) => `<li>
       <span><strong>${song.artist.name}</strong> - ${song.title}</span>
-      <button class="btn" data-artist="${song.artist.name}" data-songtitle="${song.title}">Ver Letra </button>
+      <button class="btn" data-artist="${song.artist.name}" data-songtitle="${song.title}"><span>Ver Letra</span> 
+      <i class="fas fa-chevron-circle-right"></i></button>
     </li>`
           )
           .join("")}
     </ul>
   `;
 
-    if (data.prev || data.next) {
-        more.innerHTML = `
-      ${data.prev ? `<button class="btn" onclick="getMoreSongs('${data.prev}')">Anterior</button>` : ""}
-      ${data.next ? `<button class="btn" onclick="getMoreSongs('${data.next}')">Próxima</button>` : ""}
-    `;
-    } else {
-        more.innerHTML = "";
-    }
+    // if (data.prev || data.next) {
+    //     more.innerHTML = `
+    //   ${data.prev ? `<button class="btn" onclick="getMoreSongs('${data.prev}')">Anterior</button>` : ""}
+    //   ${data.next ? `<button class="btn" onclick="getMoreSongs('${data.next}')">Próxima</button>` : ""}
+    // `;
+    // } else {
+    //     more.innerHTML = "";
+    // }
 }
 
 // Get prev and next songs
@@ -62,14 +62,9 @@ async function getLyrics(artist, songTitle) {
             <h2><strong>${artist}</strong> - ${songTitle}</h2>
             <span>${lyrics}</span>
         `;
-        copy_div.innerHTML = `
-          <a href="" onclick="CopyToClipBoard()"><p id="copy_btn" class="copy_lyrics ">Copiar Letra</p></a>
-        `;
-        // Add the lyrics on a input.value so we can copy to clipboard if desired
-        inputContent.value = `${lyrics}`;
     }
 
-    more.innerHTML = "";
+    // more.innerHTML = "";
 }
 
 // Event listeners
@@ -79,7 +74,7 @@ form.addEventListener("submit", (e) => {
     const searchTerm = search.value.trim();
 
     if (!searchTerm) {
-        alert("Oque você espera encontrar com isso? Alguma música do Raimundos?!?");
+        // alert("Oque você espera encontrar com isso? Alguma música do Raimundos?!?");
     } else {
         searchSongs(searchTerm);
     }
