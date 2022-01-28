@@ -12,4 +12,4 @@ Using lyrics.ov api to make a page that retrives song lyrics.
 <br />
 <br />
 
-Link to prototype: [MusicNation.com](http://isaquesilva.infinityfreeapp.com/MusicNation/)
+Link to prototype: [MusicNation.com](https://isaquesantossilva.github.io/MusicNation/)
